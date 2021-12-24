@@ -1,0 +1,107 @@
+{
+  "name": "nuxt-oauth2-kompasid",
+  "version": "1.0.7",
+  "private": true,
+  "scripts": {
+    "docker": "npm run dev",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js",
+    "format": "pretty-quick --staged",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.ts": "eslint",
+    "*.vue": "eslint"
+  },
+  "browserslist": [
+    ">0.5%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@nuxtjs/auth": "^4.5.1",
+    "@nuxtjs/axios": "^5.13.4",
+    "@nuxtjs/moment": "^1.6.1",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/svg": "^0.1.12",
+    "@types/nuxtjs__auth": "^4.8.7",
+    "cookie-universal-nuxt": "^2.1.4",
+    "core-js": "^3.15.1",
+    "jest-vue-preprocessor": "^1.7.1",
+    "jwt-decode": "^3.1.2",
+    "nanoid": "^2.1.11",
+    "nuxt": "^2.15.3",
+    "nuxt-fontawesome": "^0.4.0",
+    "nuxt-stencil": "^0.1.1",
+    "save": "^2.4.0",
+    "secure-ls": "^1.2.6",
+    "vuex-persistedstate": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/helper-define-polyfill-provider": "^0.2.3",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/plugin-syntax-jsx": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.13.15",
+    "@kompas/ui": "0.0.35",
+    "@kompas/web-components": "^0.2.3",
+    "@nuxt/test-utils": "^0.2.2",
+    "@nuxt/types": "^2.15.3",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^0.1.3",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/tailwindcss": "^4.2.0",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.21.0",
+    "@vue/test-utils": "^1.1.4",
+    "autoprefixer": "^10.3.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.5",
+    "cross-env": "^7.0.3",
+    "cz-conventional-changelog": "^3.0.1",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.7.0",
+    "header-pokedex": "^2.1.5",
+    "husky": "^6.0.0",
+    "jest": "^27.0.5",
+    "jest-matcher-vue-test-utils": "^2.0.1",
+    "jest-serializer-vue": "^2.0.2",
+    "nuxt-lazysizes": "^1.4.0",
+    "postcss": "^8.3.2",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.1",
+    "tailwindcss": "^2.2.4",
+    "ts-jest": "^26.5.4",
+    "typescript": "^4.2.4",
+    "vue-avatar": "^2.3.3",
+    "vue-jest": "^3.0.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

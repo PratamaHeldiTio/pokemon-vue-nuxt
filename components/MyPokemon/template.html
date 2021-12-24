@@ -1,0 +1,17 @@
+<div>
+  <div v-if="myPokemons.length === 0 ">
+    <h1 class="font-bold text-opacity-50 text-black text-center text-2xl mt-32">You Don't Have Pokemon</h1>
+  </div>
+  <div v-else class="grid grid-cols-1 tablet:grid-cols-2 laptopM:grid-cols-3 laptopL:grid-cols-4 desktopFullHD:grid-cols-6 gap-6 p-6">
+    <div v-for="myPokemon in myPokemons" class="cursor-pointer bg-gray-100">
+      <div class="rounded-md shadow-lg overflow-hidden" @click="goToMyPokemonDetail(myPokemon.myPokemonId)">
+        <img :src="myPokemon.imageUrl" :alt="myPokemon.name" />
+        <div class="p-1 bg-white">
+          <h1 class="p-3 font-bold text-center text-2xl">{{ myPokemon.nickName }}</h1>
+          <h2 class="font-bold text-center">{{ myPokemon.name }}</h2>
+        </div>
+      </div>
+      <div @click="releaseMyPokemon(myPokemon.myPokemonId)" class="p-2 text-center text-white text-xl justify-self-center cursor-pointer hover:shadow-xl transform hover:scale-105 duration-500 rounded-t-lg bg-red-thunderbird-600">Release</div>
+    </div>
+  </div>
+</div>

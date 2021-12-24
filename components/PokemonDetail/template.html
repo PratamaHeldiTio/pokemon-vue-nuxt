@@ -1,0 +1,37 @@
+<main class="bg-grey-30">
+  <NuxtLink to="/pokemon" class="text-black inline-block font-semibold hover:text-white m-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-11 w-11" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+    </svg>
+  </NuxtLink>
+  <div class="flex justify-center">
+    <img :src="pokemonDetail.imageUrl" :alt="pokemonDetail.name" />
+  </div>
+  <div class="px-4 py-4 mb-10">
+    <div class="mb-4 text-3xl font-bold text-purple-600 uppercase text-center">{{pokemonDetail.name}}</div>
+    <div class="text-center py-1 bg-blue-500 text-white font-semibold rounded-lg shadow-md text-sm">
+      <h5>Type</h5>
+      <h2>{{pokemonDetail.type}}</h2>
+    </div>
+    <span class="p-3 grid justify-center text-red-thunderbird-600 text-center grid-flow-col grid-cols-2 grid-rows-2 gap-4">
+      <div class="py-1 bg-blue-500 text-white font-semibold rounded-lg shadow-md text-sm">
+        <h5>Height</h5>
+        <h2>{{pokemonDetail.height}}</h2>
+      </div>
+      <div class="py-1 bg-blue-500 text-white font-semibold rounded-lg shadow-md text-sm">
+        <h5>Weight</h5>
+        <h2>{{pokemonDetail.weight}}</h2>
+      </div>
+      <div class="py-1 bg-blue-500 text-white font-semibold rounded-lg shadow-md text-sm">
+        <h5>Attack</h5>
+        <h2>{{pokemonDetail.attack}}</h2>
+      </div>
+      <div class="py-1 bg-blue-500 text-white font-semibold rounded-lg shadow-md text-sm">
+        <h5>Defense</h5>
+        <h2>{{pokemonDetail.defense}}</h2>
+      </div>
+    </span>
+    <p class="p-6 text-l text-red-thunderbird-600 text-center tablet:text-center">{{pokemonDetail.description}}</p>
+  </div>
+  <button @click="catchPokemon" class="w-full h-16 text-lg rounded-t-lg font-extrabold text-white transition duration-300 bg-red-thunderbird-600 rounded-b-lg">CATCH</button>
+</main>

@@ -1,0 +1,20 @@
+<div>
+  <div class="flex justify-center inline-block">
+    <div class="bg-red-thunderbird-700 px-6 rounded-b-lg sticky top-0">
+      <img src="~/assets/images/pokeball.png" alt="pokeball" class="w-12">
+      <p class="text-white font-bold text-2xl text-center">{{totalMyPokemons}}</p>
+    </div>
+  </div>
+<div class="grid grid-cols-1 tablet:grid-cols-2 laptopM:grid-cols-3 laptopL:grid-cols-4 desktopFullHD:grid-cols-6 gap-6 p-6">
+  <div v-for="pokemon in pokemons">
+    <div class=" bg-gray-100" @click="goToPokemonDetail(pokemon.id)">
+      <div class="rounded-md cursor-pointer shadow-lg overflow-hidden hover:shadow-xl transform hover:scale-105 duration-500">
+        <img :data-src="pokemon.imageUrl" :alt="pokemon.name" class="lazyload" />
+        <div class="p-1 bg-white">
+          <h1 class="p-3 font-bold text-center text-2xl">{{pokemon.name}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

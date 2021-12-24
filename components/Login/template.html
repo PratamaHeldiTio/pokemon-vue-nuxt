@@ -1,0 +1,23 @@
+<div class=" h-screen  bg-gray-300 bg-opacity-80  flex justify-center items-center">
+  <div class="shadow-xl rounded-xl bg-white">
+    <h1 class="text-2xl font-bold text-center mt-8 desktopL:text-4xl">
+      Login
+    </h1>
+    <div class="flex justify-center mt-4">
+      <div v-bind:class="{hidden: hiddenError}" class="text-red-400 text-center w-40 tablet:w-full">{{errorMessage}}</div>
+    </div>
+    <form class=" px-8 pt-6 pb-8 mb-4">
+      <div class="identity-input mb-4 tablet:flex tablet:justify-center">
+        <input v-model="inputUsername" id="username" class="focus:outline-none border-b-1 tablet:w-80 py-2 px-3 mb-3" type="text" placeholder="Username" autocomplete="off"/>
+      </div>
+      <div class="identity-input mb-4 tablet:flex tablet:justify-center">
+        <input v-model="inputPass" id="password" class="focus:outline-none border-b-1 tablet:w-80 py-2 px-3 mb-3" type="password" placeholder="Password" />
+      </div>
+      <div class="flex items-center justify-center">
+        <button @click="inputValidation" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="button">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
